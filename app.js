@@ -90,3 +90,11 @@ window.addEventListener('scroll', () => {
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+function abrirModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function fecharModal(id) {
+  document.getElementById(id).style.display = "none";
+}

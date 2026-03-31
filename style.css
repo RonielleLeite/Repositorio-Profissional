@@ -25,7 +25,7 @@
 
 /* ===== BODY ===== */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: linear-gradient(180deg, #2c2c2c, #1e1e1e);
   color: var(--text-color);
   line-height: 1.6;
@@ -163,7 +163,7 @@ section {
   margin: 50px auto;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   border: 2px solid var(--border-color);
   background-color: #2a2a2a;
 }
@@ -184,8 +184,10 @@ section {
   padding: 20px;
   text-align: center;
   width: 280px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .formacao-card:hover {
@@ -249,7 +251,7 @@ section.tecnologias li i {
   background: #2a2a2a;
   border: 2px solid var(--border-color);
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -283,7 +285,9 @@ section.tecnologias li i {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .btn-leia-mais:hover {
@@ -295,18 +299,23 @@ section.tecnologias li i {
 .modal {
   display: none;
   position: fixed;
-  z-index: 999;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* permite rolar o modal inteiro */
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
-  background-color: #2a2a2a;
-  margin: 80px auto;
+  background-color: var(--header-bg);
+  margin: 10% auto;
   padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  color: var(--text-color);
+  border: 1px solid #888;
+  width: 80%;
+  max-height: 70vh; /* altura máxima relativa à tela */
+  overflow-y: auto; /* ativa rolagem vertical dentro da caixa */
 }
 
 .close {
@@ -336,7 +345,9 @@ section.tecnologias li i {
   color: var(--accent-color);
   font-size: 24px;
   text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .social-icons a:hover {
@@ -386,7 +397,7 @@ footer {
   color: var(--text-color);
   margin-top: 50px;
   border-top: 2px solid var(--border-color);
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
 }
 
 footer p {
@@ -395,14 +406,14 @@ footer p {
   /* usa cor padrão */
   text-align: center;
   /* garante centralização */
-  margin: 0;/* remove margens extras */
+  margin: 0; /* remove margens extras */
 }
 
 /* Botão voltar ao topo */
 #backToTop {
-  position: fixed;/* Fixa o botão na tela */
-  bottom: clamp(15px, 3vw, 40px);/* Distância do fundo */
-  right: clamp(15px, 3vw, 40px);/* Distância da direita */
+  position: fixed; /* Fixa o botão na tela */
+  bottom: clamp(15px, 3vw, 40px); /* Distância do fundo */
+  right: clamp(15px, 3vw, 40px); /* Distância da direita */
   width: 50px;
   height: 50px;
   background: linear-gradient(135deg, #9c27b0, #7b1fa2);
@@ -413,8 +424,10 @@ footer p {
   cursor: pointer;
   display: none;
   z-index: 999;
-  box-shadow: 0 4px 12px rgba(0,0,0,.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* Efeito hover para o botão voltar ao topo */
@@ -430,13 +443,15 @@ footer p {
   left: clamp(15px, 3vw, 40px);
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #25D366, #128C7E);
+  background: linear-gradient(135deg, #25d366, #128c7e);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   z-index: 999;
   text-decoration: none;
 }
@@ -450,7 +465,7 @@ footer p {
 /* Efeito hover para ambos os botões */
 #whatsapp-icon:hover {
   transform: scale(1.15);
-  box-shadow: 0 0 15px #25D366;
+  box-shadow: 0 0 15px #25d366;
 }
 
 /* ===== RESPONSIVO ===== */
@@ -482,7 +497,6 @@ footer p {
 
 /* Ajustes adicionais para telas menores */
 @media (max-width: 768px) {
-
   #whatsapp-icon,
   #backToTop {
     width: 40px;
