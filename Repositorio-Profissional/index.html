@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Portifólio</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-left">
+        <h1>Bem-vindo ao Meu Portfólio</h1>
+        <p class="subtitulo">Transformando ideias em soluções digitais</p>
+      </div>
+
+      <!-- Botão de menu mobile -->
+      <button id="menuToggle" class="menu-toggle">☰</button>
+
+      <!-- Navegação -->
+      <nav>
+        <ul>
+          <li>
+            <a href="#sobre"><i class="fas fa-user"></i> Sobre Mim</a>
+          </li>
+          <li>
+            <a href="#formacao"
+              ><i class="fas fa-graduation-cap"></i> Formação Acadêmica</a
+            >
+          </li>
+          <li>
+            <a href="#tecnologias"><i class="fas fa-code"></i> Tecnologias</a>
+          </li>
+          <li>
+            <a href="#projetos"><i class="fas fa-folder-open"></i> Projetos</a>
+          </li>
+          <li>
+            <a href="#contato"><i class="fas fa-envelope"></i> Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Seção Sobre Mim -->
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <p>
+        Sou Ronielle Leite, formado em Gestão em Tecnologia da Informação pela
+        Universidade Uninter e atualmente cursando pós-graduação em
+        Desenvolvimento Full Stack pela Estácio.
+      </p>
+      <p>
+        Ao longo da minha trajetória, descobri uma verdadeira paixão por criar
+        soluções através da tecnologia. Sou apaixonado por desenvolver sites
+        responsivos que funcionam perfeitamente em qualquer dispositivo,
+        combinando design funcional com experiência do usuário de qualidade.
+      </p>
+      <p>
+        Minha jornada é movida por desafios. Gosto de transformar ideias em
+        realidade, resolver problemas complexos e aprender constantemente com
+        novas tecnologias. Para mim, a tecnologia é mais que código – é uma
+        forma de criar valor e resolver problemas reais.
+      </p>
+    </section>
+
+    <!-- Formação Acadêmica -->
+    <section id="formacao">
+      <h2>Formação Acadêmica</h2>
+      <div class="formacao-container">
+        <!-- Graduação -->
+        <div class="formacao-card">
+          <!-- logo da Uninter -->
+          <img
+            src="uninterLogo.png"
+            alt="Logo Uninter"
+            class="formacao-logo"
+          />
+          <h3>Gestão em Tecnologia da Informação</h3>
+          <p>Universidade Uninter</p>
+        </div>
+
+        <!-- Pós-graduação -->
+        <div class="formacao-card">
+          <!-- logo da Estácio -->
+          <img
+            src="logoEstacio.jpg"
+            alt="Logo Estácio"
+            class="formacao-logo"
+          />
+          <h3>Pós-graduação em Desenvolvimento Full Stack</h3>
+          <p>Estácio (em andamento)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Tecnologias -->
+    <section id="tecnologias" class="tecnologias">
+      <h2>Tecnologias</h2>
+      <ul>
+        <li><i class="fab fa-html5"></i> HTML5</li>
+        <li><i class="fab fa-css3-alt"></i> CSS3</li>
+        <li><i class="fab fa-js"></i> JavaScript</li>
+        <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+        <li><i class="fab fa-react"></i> React</li>
+        <li><i class="fab fa-vuejs"></i> Vue.js</li>
+        <li><i class="fab fa-angular"></i> Angular</li>
+        <li><i class="fab fa-node-js"></i> Node.js</li>
+        <li><i class="fab fa-python"></i> Python</li>
+        <li><i class="fas fa-database"></i> MySQL</li>
+        <li><i class="fas fa-database"></i> SQLite</li>
+        <li><i class="fab fa-git"></i> Git</li>
+        <li><i class="fab fa-github"></i> GitHub</li>
+      </ul>
+    </section>
+
+    <!-- Seções de Projetos -->
+    <section class="projetos" id="projetos">
+      <h2>Meus Projetos</h2>
+      <div class="projetos-grid">
+        <!-- Projeto 1 -->
+        <div class="projeto-card">
+          <img src="dom_Js.png" alt="Projeto 1" />
+          <h3>Gerenciador de Texto com DOM e JavaScript</h3>
+          <p>
+            Aplicação simples e interativa que permite inserir e limpar textos
+            digitados em uma caixa, exibindo-os abaixo. Inclui validação com
+            alerta quando o envio é feito sem conteúdo.
+          </p>
+          <button class="btn-leia-mais" data-modal="modal1">Leia mais</button>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="projeto-card">
+          <img src="superMerc.png" alt="Projeto 2" />
+          <h3>Caixa de Supermercado – Simulador Interativo</h3>
+          <p>
+            Aplicação interativa que simula o processo de atendimento em um
+            caixa de supermercado.
+          </p>
+          <button class="btn-leia-mais" data-modal="modal2">Leia mais</button>
+        </div>
+                
+    </section>
+
+    <!-- Modais -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Gerenciador de Texto com DOM e JavaScript</h3>
+        <p>
+          Este projeto foi desenvolvido com foco em praticar manipulação do DOM
+          utilizando JavaScript puro. A aplicação consiste em uma caixa de texto
+          acompanhada de dois botões principais: Inserir Texto e Limpar Texto. -
+          Ao inserir conteúdo na caixa e clicar em "Inserir Texto", o texto é
+          automaticamente salvo e exibido abaixo, permitindo ao usuário
+          visualizar o histórico de entradas. - Caso o botão seja acionado sem
+          que nenhum texto tenha sido digitado, o sistema apresenta uma mensagem
+          de alerta, garantindo uma experiência mais intuitiva e evitando erros
+          de uso. - O botão "Limpar Texto" remove rapidamente o conteúdo
+          digitado, oferecendo praticidade e controle ao usuário. Este projeto
+          demonstra conceitos fundamentais de interatividade em páginas web,
+          como: - Manipulação de elementos HTML via DOM; - Validação de entrada
+          de dados; - Uso de eventos para dinamizar a experiência do usuário.
+          Além de ser um exercício prático de lógica e programação, o projeto
+          reflete a importância de criar interfaces simples, funcionais e
+          responsivas, que valorizam a usabilidade e a clareza na interação com
+          o usuário.
+        </p>
+        <a
+          href="https://ronielleleite.github.io/Manipulando-DOM-js/"
+          target="_blank"
+          >Clica e Veja o Projeto</a
+        >
+      </div>
+    </div>
+
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Caixa de Supermercado – Simulador Interativo</h3>
+        <p>
+          Este projeto foi desenvolvido com o objetivo de treinar JavaScript e
+          manipulação do DOM, criando uma experiência interativa que simula o
+          processo de atendimento em um caixa de supermercado. - O usuário pode
+          adicionar produtos com seus respectivos preços, que são exibidos em
+          uma lista organizada. - O sistema realiza o cálculo automático do
+          valor total, atualizando em tempo real conforme novos itens são
+          inseridos ou removidos. - Inclui funcionalidades de limpar a lista e
+          reiniciar o processo, garantindo praticidade e controle. - Foram
+          aplicados conceitos de validação de entrada, com alerta de erro quando
+          o usuário tenta enviar uma caixa em branco, evitando inconsistências.
+          - Também foi implementada a opção de adicionar desconto, permitindo
+          simular promoções e calcular o valor final com abatimento. - O projeto
+          reforça boas práticas de usabilidade, com mensagens claras e interface
+          simples, tornando a experiência acessível e eficiente. Este simulador
+          demonstra como recursos básicos de JavaScript podem ser aplicados para
+          resolver problemas cotidianos, além de servir como base para sistemas
+          mais complexos de gestão de vendas e controle de estoque. - Detalhe
+          desse projeto é: Quando selecionar a opção de "Alimentação", pedi para
+          adicionar a data de validade do produto.
+        </p>
+        <a
+          href="https://ronielleleite.github.io/Caixa-SuperMercado/"
+          target="_blank"
+          >Clica e Veja o Projeto</a
+        >
+      </div>
+    </div>
+
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Projeto 3</h3>
+        <p>Descrição completa do projeto 3...</p>
+        <a href="https://github.com/ronielle/projeto3" target="_blank"
+          >Ver no GitHub</a
+        >
+      </div>
+    </div>
+
+    <!-- Contato -->
+    <section id="contato">
+      <!-- título da seção -->
+      <h2>Contato</h2>
+
+      <!-- ícones sociais -->
+      <div class="social-icons">
+        <a
+          href="https://github.com/RonielleLeite"
+          target="_blank"
+          aria-label="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://linkedin.com/in/ronielle-leite/"
+          target="_blank"
+          aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="mailto:ronielle.leite@outlook.com.br" aria-label="Email"
+          ><i class="fas fa-envelope"></i
+        ></a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Ronielle Leite – Todos os direitos reservados.</p>
+    </footer>
+  
+  <!-- Botão voltar ao topo -->
+  <button id="backToTop">↑</button>
+
+<!-- Ícone WhatsApp fixo -->
+  <a href="https://wa.me/5524999124067?text=Olá%20Ronielle,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20possíveis%20oportunidades." rel="noopener noreferrer"
+    target="_blank" 
+    id="whatsapp-icon" 
+    aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="app.js"></script>
+  </body>
+</html>
+

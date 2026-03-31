@@ -1,0 +1,498 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIÁVEIS DE TEMA DARK ===== */
+:root {
+  --bg-color: #1e1e1e;
+  /* fundo principal */
+  --text-color: #e0e0e0;
+  /* cor padrão do texto */
+  --header-bg: #2c2c2c;
+  /* fundo do header/footer */
+  --link-color: #9c27b0;
+  /* roxo pastel */
+  --link-hover: #7b1fa2;
+  /* roxo escuro hover */
+  --accent-color: #9c27b0;
+  /* cor de destaque */
+  --border-color: #3a3a3a;
+  /* cor das bordas */
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #2c2c2c, #1e1e1e);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  background: var(--header-bg);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.header-left h1 {
+  font-size: 2.4rem;
+  color: var(--accent-color);
+  text-align: center;
+  text-shadow: 0 0 6px #7b1fa2;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  color: #bdbdbd;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ===== ÍCONE MENU MOBILE ===== */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--accent-color);
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  header {
+    position: relative;
+  }
+}
+
+/* ===== LINHA DECORATIVA HEADER ===== */
+header::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 2px;
+  background: var(--accent-color);
+  margin: 10px auto 20px;
+  border-radius: 2px;
+}
+
+/* ===== MENU DE NAVEGAÇÃO ===== */
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+nav ul li a:hover {
+  color: var(--link-hover);
+  text-shadow: 0 0 6px var(--link-hover);
+}
+
+/* ===== MENU MOBILE ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: none;
+    margin-top: 10px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 24px;
+  }
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SECTIONS ===== */
+section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+  border: 2px solid var(--border-color);
+  background-color: #2a2a2a;
+}
+
+/* ===== FORMAÇÃO ===== */
+.formacao-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.formacao-card {
+  background: #2a2a2a;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 280px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formacao-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
+.formacao-logo {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+.formacao-card h3 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.formacao-card p {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+/* ===== TECNOLOGIAS ===== */
+section.tecnologias ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+}
+
+section.tecnologias li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  background-color: #333;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+section.tecnologias li:hover {
+  transform: scale(1.05);
+}
+
+section.tecnologias li i {
+  font-size: 28px;
+  color: var(--accent-color);
+}
+
+/* ===== PROJETOS ===== */
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.projeto-card {
+  background: #2a2a2a;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
+.projeto-card img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.projeto-card h3 {
+  margin: 15px;
+  color: var(--accent-color);
+}
+
+.projeto-card p {
+  margin: 0 15px 15px;
+  color: var(--text-color);
+}
+
+.btn-leia-mais {
+  margin: 0 15px 15px;
+  padding: 8px 12px;
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-leia-mais:hover {
+  background: var(--link-hover);
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #2a2a2a;
+  margin: 80px auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  color: var(--text-color);
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: var(--accent-color);
+}
+
+/* ===== CONTATO ===== */
+#contato {
+  text-align: center;
+}
+
+#contato h2 {
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-icons a {
+  margin: 0 10px;
+  color: var(--accent-color);
+  font-size: 24px;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: var(--link-hover);
+}
+
+/* ===== TÍTULOS & PARÁGRAFOS ===== */
+h1,
+h2,
+h3 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 15px;
+  color: var(--text-color);
+  text-align: justify;
+}
+
+/* ===== TÍTULOS & PARÁGRAFOS ===== */
+h1,
+h2,
+h3 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 15px;
+  color: var(--text-color);
+  text-align: justify;
+  font-size: large;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  /* centraliza conteúdo */
+  padding: 20px 0;
+  background: var(--header-bg);
+  color: var(--text-color);
+  margin-top: 50px;
+  border-top: 2px solid var(--border-color);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, .3);
+}
+
+footer p {
+  font-size: 14px;
+  color: var(--text-color);
+  /* usa cor padrão */
+  text-align: center;
+  /* garante centralização */
+  margin: 0;/* remove margens extras */
+}
+
+/* Botão voltar ao topo */
+#backToTop {
+  position: fixed;/* Fixa o botão na tela */
+  bottom: clamp(15px, 3vw, 40px);/* Distância do fundo */
+  right: clamp(15px, 3vw, 40px);/* Distância da direita */
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover para o botão voltar ao topo */
+#backToTop:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px #9c27b0;
+}
+
+/* Ícone WhatsApp fixo */
+#whatsapp-icon {
+  position: fixed;
+  bottom: clamp(15px, 3vw, 40px);
+  left: clamp(15px, 3vw, 40px);
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
+  text-decoration: none;
+}
+
+/* Ícone WhatsApp */
+#whatsapp-icon i {
+  color: #fff;
+  font-size: 26px;
+}
+
+/* Efeito hover para ambos os botões */
+#whatsapp-icon:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px #25D366;
+}
+
+/* ===== RESPONSIVO ===== */
+/* Responsivo */
+@media (max-width: 768px) {
+  #backToTop,
+  #whatsapp-icon {
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+  }
+
+  #backToTop {
+    font-size: 20px;
+  }
+
+  #whatsapp-icon i {
+    font-size: 22px;
+  }
+
+  /* Ícone WhatsApp fixo */
+  #whatsapp-icon {
+    font-size: 32px;
+    padding: 8px;
+    bottom: 15px;
+    left: 15px;
+  }
+}
+
+/* Ajustes adicionais para telas menores */
+@media (max-width: 768px) {
+
+  #whatsapp-icon,
+  #backToTop {
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+  }
+
+  /* Ícone WhatsApp fixo */
+  #whatsapp-icon i,
+  #backToTop {
+    font-size: 20px;
+  }
+}
